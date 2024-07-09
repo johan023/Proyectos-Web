@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://fonts.googleapis.com/css?family=Verdana' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="script.js" async></script>
+    <title>Supermercado</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div id="h1a">Supermercado &nbsp
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                </svg>
+            </div>
+            <section id="h1b" class="buscador">
+                <input type="text" id="campo-busqueda" placeholder="Buscar productos...">
+                <button id="boton-busqueda">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                    </svg>
+                </button>
+            </section>
+        </div>
+    </header>
+    <br>
+    <section class="filtros-categorias">
+        <button class="filtro-categoria" data-category="todos">Todos los productos</button>
+        <button class="filtro-categoria" data-category="verduras">Verduras</button>
+        <button class="filtro-categoria" data-category="fruta">Fruta</button>
+        <button class="filtro-categoria" data-category="pescado-y-mariscos">Pescado y marisco</button>
+        <button class="filtro-categoria" data-category="carne">Carne</button>
+        <button class="filtro-categoria" data-category="lacteos">Lácteos</button>
+        <button class="filtro-categoria" data-category="panaderia">Panadería</button>
+        <button class="filtro-categoria" data-category="snacks">Snacks</button>
+        <button class="filtro-categoria" data-category="dulces">Dulces</button>
+        <button class="filtro-categoria" data-category="bebidas">Bebidas</button>
+        <button class="filtro-categoria" data-category="otros">Otros</button>
+    </section>
+    
+    <section class="contenedor">
+        <div class="contenedor-items">
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Tomate 500g</span>
+                <img src="img/tomato.jpg" alt="" class="img-item">
+                <span class="precio-item">0,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Pepino 300g</span>
+                <img src="img/cucumber.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Repollo 600g</span>
+                <img src="img/cabbage.jpg" alt="" class="img-item">
+                <span class="precio-item">1,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Pimientos 450g</span>
+                <img src="img/peppers.png" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Patatas 1kg</span>
+                <img src="img/potatoes.jpg" alt="" class="img-item">
+                <span class="precio-item">1,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="verduras">
+                <span class="titulo-item">Cebollas 550g</span>
+                <img src="img/onions.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Naranjas 900g</span>
+                <img src="img/oranges.jpg" alt="" class="img-item">
+                <span class="precio-item">2,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Fresas 250g</span>
+                <img src="img/strawberries.jpg" alt="" class="img-item">
+                <span class="precio-item">0,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Plátanos 200g</span>
+                <img src="img/bananas.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Piña 800g</span>
+                <img src="img/pineapple.jpg" alt="" class="img-item">
+                <span class="precio-item">1,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Manzanas 400g</span>
+                <img src="img/apples.jpg" alt="" class="img-item">
+                <span class="precio-item">0,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="fruta">
+                <span class="titulo-item">Sandía 5kg</span>
+                <img src="img/watermelon.jpg" alt="" class="img-item">
+                <span class="precio-item">2,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Atún 1kg</span>
+                <img src="img/tuna.jpg" alt="" class="img-item">
+                <span class="precio-item">8,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Merluza 600g</span>
+                <img src="img/hake.jpg" alt="" class="img-item">
+                <span class="precio-item">5,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Salmón 800g</span>
+                <img src="img/salmon.jpg" alt="" class="img-item">
+                <span class="precio-item">7,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Bacalao 650g</span>
+                <img src="img/cod.jpg" alt="" class="img-item">
+                <span class="precio-item">5,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Gambas 300g</span>
+                <img src="img/prawns.jpg" alt="" class="img-item">
+                <span class="precio-item">3,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="pescado-y-mariscos">
+                <span class="titulo-item">Mejillones 500g</span>
+                <img src="img/mussels.jpg" alt="" class="img-item">
+                <span class="precio-item">4,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Pollo 1kg</span>
+                <img src="img/chicken.jpg" alt="" class="img-item">
+                <span class="precio-item">8,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Ternera 500g</span>
+                <img src="img/beef.jpg" alt="" class="img-item">
+                <span class="precio-item">6,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Pavo 450g</span>
+                <img src="img/turkey.jpg" alt="" class="img-item">
+                <span class="precio-item">4,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Cordero 600g</span>
+                <img src="img/lamb.jpg" alt="" class="img-item">
+                <span class="precio-item">6,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Cerdo 750g</span>
+                <img src="img/pork.jpg" alt="" class="img-item">
+                <span class="precio-item">8,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="carne">
+                <span class="titulo-item">Albóndigas 300g</span>
+                <img src="img/meatballs.jpg" alt="" class="img-item">
+                <span class="precio-item">2,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Leche 1L</span>
+                <img src="img/milk.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Mantequilla 1/2kg</span>
+                <img src="img/butter.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Yogur 750g</span>
+                <img src="img/yogurt.jpg" alt="" class="img-item">
+                <span class="precio-item">0,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Petit Suisse 400g</span>
+                <img src="img/petitsuisse.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Queso Emmental 300g</span>
+                <img src="img/emmental-cheese.jpg" alt="" class="img-item">
+                <span class="precio-item">1,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="lacteos">
+                <span class="titulo-item">Queso Gouda 600g</span>
+                <img src="img/gouda-cheese.jpg" alt="" class="img-item">
+                <span class="precio-item">1,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Baguette 250g</span>
+                <img src="img/baguette.jpg" alt="" class="img-item">
+                <span class="precio-item">0,45€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Panecillo 100g</span>
+                <img src="img/bread-roll.jpg" alt="" class="img-item">
+                <span class="precio-item">0,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Pan integral 250g</span>
+                <img src="img/integral-bread.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Pretzel 50g</span>
+                <img src="img/pretzel.jpg" alt="" class="img-item">
+                <span class="precio-item">0,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Croissant 30g</span>
+                <img src="img/croissant.jpg" alt="" class="img-item">
+                <span class="precio-item">0,19€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="panaderia">
+                <span class="titulo-item">Porción de pizza 150g</span>
+                <img src="img/slice-pizza.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Patatas "Chips" 170g</span>
+                <img src="img/chips.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Cacahuetes 150g</span>
+                <img src="img/peanuts.jpg" alt="" class="img-item">
+                <span class="precio-item">1,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Almendras 150g</span>
+                <img src="img/almonds.jpg" alt="" class="img-item">
+                <span class="precio-item">1,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Galletas "Crackers" 300g</span>
+                <img src="img/crackers.jpg" alt="" class="img-item">
+                <span class="precio-item">1,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Pistachos 250g</span>
+                <img src="img/pistachios.jpg" alt="" class="img-item">
+                <span class="precio-item">1,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="snacks">
+                <span class="titulo-item">Palomitas de maíz 200g</span>
+                <img src="img/popcorn.jpg" alt="" class="img-item">
+                <span class="precio-item">1,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Chocolate 150g</span>
+                <img src="img/chocolate.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Chicle 25g</span>
+                <img src="img/bubble-gum.jpg" alt="" class="img-item">
+                <span class="precio-item">0,19€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Piruleta 15g</span>
+                <img src="img/lollypop.jpg" alt="" class="img-item">
+                <span class="precio-item">0,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Donut 75g</span>
+                <img src="img/donut.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Galletas dulces 200g</span>
+                <img src="img/cookies.jpg" alt="" class="img-item">
+                <span class="precio-item">1,25€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="dulces">
+                <span class="titulo-item">Kit-Kat 50g</span>
+                <img src="img/kitkat.jpg" alt="" class="img-item">
+                <span class="precio-item">0,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Agua 2L</span>
+                <img src="img/water.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Coca-Cola 2L</span>
+                <img src="img/coke.jpg" alt="" class="img-item">
+                <span class="precio-item">1,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Fanta 2L</span>
+                <img src="img/fanta.jpg" alt="" class="img-item">
+                <span class="precio-item">1,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Agua con gas 500mL</span>
+                <img src="img/water-gas.jpg" alt="" class="img-item">
+                <span class="precio-item">0,65€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Vino 750mL</span>
+                <img src="img/wine.jpg" alt="" class="img-item">
+                <span class="precio-item">2,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="bebidas">
+                <span class="titulo-item">Licor 750mL</span>
+                <img src="img/spirit.jpg" alt="" class="img-item">
+                <span class="precio-item">9,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Papel A4 500 hojas</span>
+                <img src="img/paper-a4.jpg" alt="" class="img-item">
+                <span class="precio-item">2,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Auriculares</span>
+                <img src="img/headphones.jpg" alt="" class="img-item">
+                <span class="precio-item">4,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Detergente cápsulas "Fairy"</span>
+                <img src="img/fairy.jpg" alt="" class="img-item">
+                <span class="precio-item">3,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Toallitas</span>
+                <img src="img/wet-wipes.jpg" alt="" class="img-item">
+                <span class="precio-item">1,75€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Pegamento</span>
+                <img src="img/glue.jpg" alt="" class="img-item">
+                <span class="precio-item">0,49€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+            <div class="item" data-category="otros">
+                <span class="titulo-item">Bombillas (3 uds.)</span>
+                <img src="img/lightbulbs.jpg" alt="" class="img-item">
+                <span class="precio-item">1,99€</span>
+                <button class="boton-item">Añadir al Carrito</button>
+            </div>
+        </div>
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items"></div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Total</strong>
+                    <span class="carrito-precio-total"></span>
+                </div>
+                <button type="submit" class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
